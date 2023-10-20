@@ -1,5 +1,5 @@
 .heading {
-    color: #3b5472;
+    color: #3c837f;
     text-align: center;
 }
 
@@ -12,6 +12,8 @@
 }
 
 #myBox {
+    caret-color: #3b5472;
+    padding: 10px;
     border-radius: 10px;
     width: 80%;
 }

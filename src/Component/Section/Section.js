@@ -3,20 +3,41 @@ import "./Section.css";
 
 const Section = () => {
   const [text, setText] = useState("");
+
   //   ************** Onchange function  **************
   const handleOnchange = (e) => {
     setText(e.target.value);
   };
+
   //   ************** UpperCase function **************
   const upperCase = () => {
     let newText = text.toUpperCase();
     setText(newText);
   };
+
   //   ************** LowerCase function **************
   const lowerCase = () => {
     let newText = text.toLowerCase();
     setText(newText);
   };
+
+  //   ************** copyText function **************
+  const copyText = () => {
+    navigator.clipboard.writeText(text);
+  };
+
+  //   ************** Remove Extra Spaces function **************
+  const removeExtraSpaces = () => {
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
+  };
+
+  //   ************** copyText function **************
+  const clearText = () => {
+    let newText = "";
+    setText(newText);
+  };
+
   return (
     <>
       <div className="container">
@@ -32,15 +53,41 @@ const Section = () => {
           ></textarea>
         </div>
         <div className="buttons">
-          <button className="button" onClick={upperCase}>
+          <button
+            disabled={text.length === 0}
+            className="button"
+            onClick={upperCase}
+          >
             uppercase
           </button>
-          <button className="button" onClick={lowerCase}>
+          <button
+            disabled={text.length === 0}
+            className="button"
+            onClick={lowerCase}
+          >
             lowercase
           </button>
-          <button className="button">copy text</button>
-          <button className="button">remove extra space</button>
-          <button className="button">clear</button>
+          <button
+            disabled={text.length === 0}
+            className="button"
+            onClick={copyText}
+          >
+            copy text
+          </button>
+          <button
+            disabled={text.length === 0}
+            className="button"
+            onClick={removeExtraSpaces}
+          >
+            remove extra space
+          </button>
+          <button
+            disabled={text.length === 0}
+            className="button"
+            onClick={clearText}
+          >
+            clear
+          </button>
         </div>
       </div>
     </>
