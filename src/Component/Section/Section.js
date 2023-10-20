@@ -41,7 +41,7 @@ const Section = (props) => {
   return (
     <>
       <div className="container">
-        <h1 className="heading">Text-Formatter</h1>
+        <h1 className="heading">Enter Your Text</h1>
         <div className="textarea">
           <textarea
             name="textarea"
@@ -91,30 +91,30 @@ const Section = (props) => {
         </div>
       </div>
 
-        {/* --------------------------------------------------- */}
-        <div
-          className="container"
-          style={{ color: props.mode === "dark" ? "white" : "#fff" }}
-        >
-          <h2 className="sub_heading">Your text summary</h2>
-          <p>
-            {
-              text.split(/\s+/).filter((e) => {
-                return e.length !== 0;
-              }).length
-            }{" "}
-            words and {text.length} characters
-          </p>
-          <p> Average time to read is {0.008 * text.length} Seconds read</p>
-          {text.length !== 0 ? (
-            <div className="preview">
-              <h2 className="sub_heading">Preview</h2>
-              <p>{text}</p>
-            </div>
-          ) : (
-            ""
-          )}
-        </div>
+      {/* --------------------------------------------------- */}
+      <div
+        className="container"
+        style={{ color: props.mode === "dark" ? "white" : "#042743" }}
+      >
+        <h2 className="sub_heading">Your text summary</h2>
+        <p>
+          {
+            text.split(/\s+/).filter((e) => {
+              return e.length !== 0;
+            }).length
+          }{" "}
+          words and {text.length} characters
+        </p>
+        <p> Average time to read is {0.008 * text.length} Seconds read</p>
+        {text.length !== 0 ? (
+          <div className="preview">
+            <h2 className="sub_heading">Preview</h2>
+            <p>{text}</p>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
     </>
   );
 };

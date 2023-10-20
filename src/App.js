@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./Component/Header/Header";
+// import Header from "./Component/Header/Header";
 import Section from "./Component/Section/Section";
+import Navbar from "./Component/Navbar/Navbar";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -16,7 +17,8 @@ function App() {
   };
   return (
     <>
-      <Header mode={mode} toggleMode={toggleMode}/>
+    <Navbar mode={mode} toggleMode={toggleMode}/>
+      {/* <Header mode={mode} toggleMode={toggleMode}/> */}
       <Section mode={mode} toggleMode={toggleMode}/>
     </>
   );
