@@ -13,9 +13,6 @@ const Navbar = (props) => {
         <h2>Text Format</h2>
         <ul>
           <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
             <a href="https://shivam-gupta-portfolio.netlify.app/">About Me</a>
           </li>
           <div
