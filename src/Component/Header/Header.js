@@ -1,12 +1,14 @@
 import React from "react";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
+      >
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
-            Navbar
+            Text_formatter
           </a>
           <button
             class="navbar-toggler"
@@ -37,6 +39,24 @@ const Header = () => {
                 </a>
               </li>
             </ul>
+            <div
+              className={`form-check form-switch text-${
+                props.mode === "light" ? "dark" : "light"
+              }`}
+            >
+              <input
+                className="form-check-input"
+                onClick={props.toggleMode}
+                type="checkbox"
+                id="flexSwitchCheckDefault"
+              />
+              <label
+                className="form-check-label"
+                htmlFor="flexSwitchCheckDefault"
+              >
+                Enable DarkMode
+              </label>
+            </div>
           </div>
         </div>
       </nav>

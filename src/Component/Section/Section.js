@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Section.css";
 
-const Section = () => {
+const Section = (props) => {
   const [text, setText] = useState("");
 
   //   ************** Onchange function  **************
@@ -90,6 +90,31 @@ const Section = () => {
           </button>
         </div>
       </div>
+
+        {/* --------------------------------------------------- */}
+        <div
+          className="container"
+          style={{ color: props.mode === "dark" ? "white" : "#fff" }}
+        >
+          <h2 className="sub_heading">Your text summary</h2>
+          <p>
+            {
+              text.split(/\s+/).filter((e) => {
+                return e.length !== 0;
+              }).length
+            }{" "}
+            words and {text.length} characters
+          </p>
+          <p> Average time to read is {0.008 * text.length} Seconds read</p>
+          {text.length !== 0 ? (
+            <div className="preview">
+              <h2 className="sub_heading">Preview</h2>
+              <p>{text}</p>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
     </>
   );
 };

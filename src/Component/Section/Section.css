@@ -1,6 +1,7 @@
 .heading {
     color: #3c837f;
     text-align: center;
+    margin-top: 1rem;
 }
 
 .textarea,
@@ -16,6 +17,14 @@
     padding: 10px;
     border-radius: 10px;
     width: 80%;
+    margin: 1rem 0;
+    transition: all 0.2s ease-in-out;
+}
+
+#myBox:focus {
+    box-shadow: 0px 0px 8px #6f7070;
+    outline: none;
+    border: 2px solid #3b5472;
 }
 
 .button {
@@ -27,4 +36,8 @@
     margin: 1rem;
     min-width: 6rem;
     text-transform: capitalize;
+}
+
+.sub_heading {
+    color: #3c837f;
 }
