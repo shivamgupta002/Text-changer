@@ -1,0 +1,28 @@
+.heading {
+    color: #3b5472;
+    text-align: center;
+}
+
+.textarea,
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#myBox {
+    border-radius: 10px;
+    width: 80%;
+}
+
+.button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    color: #f5f7fa;
+    background-color: #3b5472;
+    margin: 1rem;
+    min-width: 6rem;
+    text-transform: capitalize;
+}
