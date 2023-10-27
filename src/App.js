@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-// import Header from "./Component/Header/Header";
 import Section from "./Component/Section/Section";
 import Navbar from "./Component/Navbar/Navbar";
 
@@ -18,7 +17,6 @@ function App() {
   return (
     <>
     <Navbar mode={mode} toggleMode={toggleMode}/>
-      {/* <Header mode={mode} toggleMode={toggleMode}/> */}
       <Section mode={mode} toggleMode={toggleMode}/>
     </>
   );
