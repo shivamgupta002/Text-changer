@@ -44,3 +44,9 @@
 .sub_heading {
     color: #3c837f;
 }
+
+.textBox{
+    border: 1px solid #3b5472;
+    min-width: 20rem;
+    min-height: 15rem;
+}
